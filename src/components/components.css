@@ -11,6 +11,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    text-shadow: 5px 5px 10px var(--hilight-color);
+}
+
 hr {
     width: 90vw;
     border: 1px solid var(--hilight-color);
