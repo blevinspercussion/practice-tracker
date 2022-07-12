@@ -10,11 +10,13 @@ function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals, a
     
     // Functions
     
-    const handleSubmit = e => {
+    const handleHeadingSubmit = e => {
         e.preventDefault();
         const headingField = document.getElementById('headingField');
         addHeading(headingField.value);
     };
+
+
 
     return (
         <div className='admin-panel'>
@@ -27,7 +29,7 @@ function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals, a
                     <input type="text" id="headingField" />
                     <br />
                     <br />
-                    <input type="submit" onClick={handleSubmit} />
+                    <input type="submit" onClick={handleHeadingSubmit} />
                 </form>
                 <br />
                 <br />
@@ -64,6 +66,12 @@ function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals, a
                     <br />
                     <br />
                 </form>
+                <h1>Practice Routine</h1>
+                <ul>
+                    {headings.map((heading, index) => (
+                        <li key={index}>{heading}</li>
+                    ))}
+                </ul>
             </div>
 
             <div>
