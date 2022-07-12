@@ -84,6 +84,11 @@ function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals, a
                     <input type="text" />
                     <br />
                     <br />
+                    <label>Description/Notes</label>
+                    <br />
+                    <textarea cols={50} rows={10} />
+                    <br />
+                    <br />
                     <input type="submit" />
                 </form>
                 <br />
