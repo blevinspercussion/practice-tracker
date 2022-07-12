@@ -1,6 +1,4 @@
-import { hasSelectionSupport } from '@testing-library/user-event/dist/utils';
 import './components.css';
-import { useState } from 'react';
 
 function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals, addHeading, addPractice }) {
        
