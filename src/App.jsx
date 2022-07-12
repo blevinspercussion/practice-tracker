@@ -11,9 +11,10 @@ import { useState } from 'react';
 function App() {
 
   // Initialize state
-  const [dailyPractice, setDailyPractice] = useState([])
-  const [shortTermGoals, setShortTermGoals] = useState([])
-  const [longTermGoals, setLongTermGoals] = useState([])
+  const [headings, setHeadings] = useState([]);
+  const [dailyPractice, setDailyPractice] = useState([]);
+  const [shortTermGoals, setShortTermGoals] = useState([]);
+  const [longTermGoals, setLongTermGoals] = useState([]);
 
 
   return (
