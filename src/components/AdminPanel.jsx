@@ -86,7 +86,7 @@ function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals, a
                     {headings.map((heading, index) => {
                         return (
                             <div key={index}>
-                                <li>{heading}</li>
+                                <li><h3>{heading}</h3></li>
                                 <ul>
                                 {dailyPractice.map((practice, index) => {
                                     if (practice.heading === heading) {
