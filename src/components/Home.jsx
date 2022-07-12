@@ -3,7 +3,7 @@ import './components.css';
 function Home () {
     return (
         <div>
-            
+
         </div>
     )
 }
