@@ -39,7 +39,7 @@ function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals })
                     <br />
                     <label>Description/Notes</label>
                     <br />
-                    <textarea />
+                    <textarea  cols={50} rows={10}/>
                     <br />
                     <br />
                     <label>Time (minutes)</label>
@@ -53,7 +53,6 @@ function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals })
             <div>
                 <h1 className='admin-sub'>Goals</h1>
                 <h3>Add New Goal</h3>
-                <br />
                 <br />
                 <form>
                     <label>Goal Type</label>
