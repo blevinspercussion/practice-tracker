@@ -1,0 +1,58 @@
+:root {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --main-bg-color: #1a1a1d;
+    --hilight-color: #c3073f;
+    --main-text-color: white;
+    --button-color: #4e4e50;
+}
+
+a {
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: 5px 5px 10px var(--hilight-color);
+}
+
+hr {
+    width: 90vw;
+    border: 1px solid var(--hilight-color);
+}
+
+.title {
+    font-family: 'Lobster', cursive;
+    font-size: 8vh;
+    margin-left: 150px;
+}
+
+.nav-bar {
+    width: 35vw;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-panel {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 90vw;
+}
+
+.admin-sub {
+    align-items: center;
+    justify-content: space-between;
+    width: 35vw;
+}
