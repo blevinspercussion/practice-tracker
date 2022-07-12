@@ -19,7 +19,6 @@ function App() {
   // Functions 
   const addHeading = (heading) => {
     setHeadings(headings.concat(heading));
-    console.log(headings);
   }
 
 

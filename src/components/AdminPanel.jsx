@@ -1,16 +1,18 @@
+import { hasSelectionSupport } from '@testing-library/user-event/dist/utils';
 import './components.css';
+import { useState } from 'react';
 
 function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals, addHeading }) {
-
-    //DOM Elements
-    const headingField = document.getElementById('headingField');
-
-    const handleChange = e => {
-        console.log(e.target.value);
-    };
-
+    
+    // Local state 
+    const [tempHeading, setTempHeading] = useState();
+    
+    
+    // Functions
+    
     const handleSubmit = e => {
         e.preventDefault();
+        const headingField = document.getElementById('headingField');
         addHeading(headingField.value);
     };
 
@@ -22,7 +24,7 @@ function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals, a
                 <form>
                     <label>Name of Heading</label>
                     <br />
-                    <input type="text" onChange={handleChange} id="headingField" />
+                    <input type="text" id="headingField" />
                     <br />
                     <br />
                     <input type="submit" onClick={handleSubmit} />
@@ -34,7 +36,7 @@ function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals, a
                 <form>
                     <label>Heading</label>
                     <br />
-                    <select onChange={handleChange} name='headingsArray' id='headings-select'>
+                    <select name='headingsArray' id='headings-select'>
                         {headings.map((option, index) => (
                             <option key={index} value={option.value}>
                                 {option}
