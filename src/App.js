@@ -21,6 +21,18 @@ function App() {
     setHeadings(headings.concat(heading));
   }
 
+  const addPractice= (heading, title, description, time) => {
+    setDailyPractice(dailyPractice.concat(
+      {
+        heading: heading,
+        title: title,
+        description: description,
+        time: time,
+      }
+    ))
+    console.log(dailyPractice);
+  }
+
 
   return (
     <div className="App">
@@ -36,6 +48,7 @@ function App() {
                                                     shortTermGoals={shortTermGoals}
                                                     longTermGoals={longTermGoals}
                                                     addHeading={addHeading}
+                                                    addPractice={addPractice}
                                                     /> } />
         </Routes>
       </Router>

@@ -2,11 +2,8 @@ import { hasSelectionSupport } from '@testing-library/user-event/dist/utils';
 import './components.css';
 import { useState } from 'react';
 
-function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals, addHeading }) {
-    
-    // Local state 
-    const [tempHeading, setTempHeading] = useState();
-    
+function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals, addHeading, addPractice }) {
+       
     
     // Functions
     
@@ -16,7 +13,21 @@ function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals, a
         addHeading(headingField.value);
     };
 
+    const handlePracticeSubmit = e => {
+        e.preventDefault();
+        const headingsSelect = document.getElementById('headings-select');
+        const practiceTitleField = document.getElementById('practice-title-field');
+        const practiceDescriptionField = document.getElementById('practice-description-field');
+        const practiceTimeField = document.getElementById('practice-time-field');
 
+        addPractice(
+            headingsSelect.value,
+            practiceTitleField.value,
+            practiceDescriptionField.value,
+            practiceTimeField.value
+        );
+        
+    }
 
     return (
         <div className='admin-panel'>
@@ -49,20 +60,20 @@ function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals, a
                     <br />
                     <label>Title</label>
                     <br />
-                    <input type='text' />
+                    <input type='text' id="practice-title-field"/>
                     <br />
                     <br />
                     <label>Description/Notes</label>
                     <br />
-                    <textarea cols={50} rows={10}/>
+                    <textarea cols={50} rows={10} id="practice-description-field"/>
                     <br />
                     <br />
                     <label>Time (minutes)</label>
                     <br />
-                    <input type='number'></input>
+                    <input type='number' id="practice-time-field" />
                     <br />
                     <br />
-                    <input type="submit" />
+                    <input type="submit" onClick={handlePracticeSubmit} />
                     <br />
                     <br />
                 </form>
