@@ -15,6 +15,7 @@ function NavBar () {
                     <li>Admin Panel</li>
                 </Link>
             </ul>
+            <hr />
         </div>
     )
 }

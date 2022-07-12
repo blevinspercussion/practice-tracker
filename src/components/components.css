@@ -43,3 +43,16 @@ hr {
     align-items: center;
     justify-content: center;
 }
+
+.admin-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+}
+
+.admin-sub {
+    align-items: center;
+    justify-content: space-between;
+    width: 35vw;
+}

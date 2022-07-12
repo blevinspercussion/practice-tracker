@@ -19,13 +19,13 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <Header />
         <Routes>
           <Route path="/" element={ <Home /> } />
           <Route path="/dailypractice" element={ <DailyPractice /> } />
           <Route path="/goals" element={ <Goals /> } />
           <Route path="/adminpanel" element={ <AdminPanel /> } />
         </Routes>
-        <Header />
       </Router>
       <Footer />
     </div>
