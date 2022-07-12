@@ -1,9 +1,17 @@
 import './components.css';
 
-function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals }) {
+function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals, addHeading }) {
+
+    //DOM Elements
+    const headingField = document.getElementById('headingField');
 
     const handleChange = e => {
         console.log(e.target.value);
+    };
+
+    const handleSubmit = e => {
+        e.preventDefault();
+        addHeading(headingField.value);
     };
 
     return (
@@ -14,7 +22,10 @@ function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals })
                 <form>
                     <label>Name of Heading</label>
                     <br />
-                    <input type="text" />
+                    <input type="text" onChange={handleChange} id="headingField" />
+                    <br />
+                    <br />
+                    <input type="submit" onClick={handleSubmit} />
                 </form>
                 <br />
                 <br />
@@ -39,12 +50,15 @@ function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals })
                     <br />
                     <label>Description/Notes</label>
                     <br />
-                    <textarea  cols={50} rows={10}/>
+                    <textarea cols={50} rows={10}/>
                     <br />
                     <br />
                     <label>Time (minutes)</label>
                     <br />
                     <input type='number'></input>
+                    <br />
+                    <br />
+                    <input type="submit" />
                     <br />
                     <br />
                 </form>
@@ -66,6 +80,9 @@ function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals })
                     <label>Title</label>
                     <br />
                     <input type="text" />
+                    <br />
+                    <br />
+                    <input type="submit" />
                 </form>
                 <br />
                 <br />

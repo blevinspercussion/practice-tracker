@@ -16,6 +16,12 @@ function App() {
   const [shortTermGoals, setShortTermGoals] = useState([]);
   const [longTermGoals, setLongTermGoals] = useState([]);
 
+  // Functions 
+  const addHeading = (heading) => {
+    setHeadings(headings.concat(heading));
+    console.log(headings);
+  }
+
 
   return (
     <div className="App">
@@ -30,6 +36,7 @@ function App() {
                                                     dailyPractice={dailyPractice}
                                                     shortTermGoals={shortTermGoals}
                                                     longTermGoals={longTermGoals}
+                                                    addHeading={addHeading}
                                                     /> } />
         </Routes>
       </Router>
