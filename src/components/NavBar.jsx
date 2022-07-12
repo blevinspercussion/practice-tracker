@@ -5,9 +5,15 @@ function NavBar () {
     return (
         <div className='nav-bar'>
             <ul className='nav-list'>
-                <li>Daily Practice</li>
-                <li>Goals</li>
-                <li>Admin Panel</li>
+                <Link to={'/dailypractice'}> 
+                    <li>Daily Practice</li>
+                </Link>
+                <Link to={'/goals'}>
+                    <li>Goals</li>
+                </Link>
+                <Link to={'/adminpanel'}>
+                    <li>Admin Panel</li>
+                </Link>
             </ul>
         </div>
     )

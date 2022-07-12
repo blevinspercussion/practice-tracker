@@ -6,6 +6,16 @@
     --button-color: #4e4e50;
 }
 
+a {
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+
+hr {
+    width: 90vw;
+    border: 1px solid var(--hilight-color);
+}
+
 .title {
     font-family: 'Lobster', cursive;
     font-size: 8vh;
