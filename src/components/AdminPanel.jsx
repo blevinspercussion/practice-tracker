@@ -9,12 +9,16 @@ function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals, a
     
     const handleHeadingSubmit = e => {
         e.preventDefault();
+        const headingForm = document.getElementById('heading-form')
         const headingField = document.getElementById('headingField');
         addHeading(headingField.value);
+        headingForm.reset();
     };
 
     const handlePracticeSubmit = e => {
         e.preventDefault();
+
+        const practiceForm = document.getElementById('practice-form')
         const headingsSelect = document.getElementById('headings-select');
         const practiceTitleField = document.getElementById('practice-title-field');
         const practiceDescriptionField = document.getElementById('practice-description-field');
@@ -26,6 +30,8 @@ function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals, a
             practiceDescriptionField.value,
             practiceTimeField.value
         );
+
+        practiceForm.reset();
         
     }
 
@@ -34,7 +40,7 @@ function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals, a
             <div className='admin-sub'>
                 <h1>Practice</h1>
                 <h3>Add New Heading</h3>
-                <form>
+                <form id="heading-form">
                     <label>Name of Heading</label>
                     <br />
                     <input type="text" id="headingField" />
@@ -46,7 +52,7 @@ function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals, a
                 <br />
 
                 <h3>Add New Practice Item</h3>
-                <form>
+                <form id="practice-form">
                     <label>Heading</label>
                     <br />
                     <select name='headingsArray' id='headings-select'>
@@ -103,7 +109,7 @@ function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals, a
                 <h1 className='admin-sub'>Goals</h1>
                 <h3>Add New Goal</h3>
                 <br />
-                <form>
+                <form id="goals-form">
                     <label>Goal Type</label>
                     <br />
                     <select>
