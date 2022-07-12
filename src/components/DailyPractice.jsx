@@ -1,10 +1,11 @@
 import './components.css';
 
-export default DailyPractice = () => {
+function DailyPractice () {
     return (
         <div>
-
+            
         </div>
     )
 }
 
+export default DailyPractice;

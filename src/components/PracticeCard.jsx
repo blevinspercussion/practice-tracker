@@ -1,10 +1,11 @@
 import './components.css';
 
-export default PracticeCard = () => {
+function PracticeCard () {
     return (
         <div>
-
+            
         </div>
     )
 }
 
+export default PracticeCard;

@@ -1,10 +1,11 @@
 import './components.css';
 
-export default GoalCard = () => {
+function GoalCard () {
     return (
         <div>
-
+            
         </div>
     )
 }
 
+export default GoalCard;

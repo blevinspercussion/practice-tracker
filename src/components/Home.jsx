@@ -1,10 +1,11 @@
 import './components.css';
 
-export default Home = () => {
+function Home () {
     return (
         <div>
-
+            
         </div>
     )
 }
 
+export default Home;

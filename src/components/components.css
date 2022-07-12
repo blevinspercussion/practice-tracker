@@ -1,0 +1,15 @@
+.title {
+    font-family: 'Lobster', cursive;
+    font-size: 8vh;
+}
+
+.nav-bar {
+    width: 45vw;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+}
