@@ -30,7 +30,6 @@ function App() {
         time: time,
       }
     ))
-    console.log(dailyPractice);
   }
 
 
