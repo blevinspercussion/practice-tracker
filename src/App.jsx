@@ -25,7 +25,12 @@ function App() {
           <Route path="/" element={ <Home /> } />
           <Route path="/dailypractice" element={ <DailyPractice /> } />
           <Route path="/goals" element={ <Goals /> } />
-          <Route path="/adminpanel" element={ <AdminPanel /> } />
+          <Route path="/adminpanel" element={ <AdminPanel 
+                                                    headings={headings}
+                                                    dailyPractice={dailyPractice}
+                                                    shortTermGoals={shortTermGoals}
+                                                    longTermGoals={longTermGoals}
+                                                    /> } />
         </Routes>
       </Router>
       <Footer />

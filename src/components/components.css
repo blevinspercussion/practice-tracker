@@ -46,7 +46,7 @@ hr {
 
 .admin-panel {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 90vw;
 }
