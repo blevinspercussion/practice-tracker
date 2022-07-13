@@ -50,7 +50,10 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={ <Home /> } />
-          <Route path="/dailypractice" element={ <DailyPractice /> } />
+          <Route path="/dailypractice" element={ <DailyPractice 
+                                                    headings={headings}
+                                                    dailyPractice={dailyPractice}
+                                                    /> } />
           <Route path="/goals" element={ <Goals /> } />
           <Route path="/adminpanel" element={ <AdminPanel 
                                                     headings={headings}

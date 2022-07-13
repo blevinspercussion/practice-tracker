@@ -1,9 +1,11 @@
 import './components.css';
 
-function PracticeCard () {
+function PracticeCard ({ title, description, time }) {
     return (
-        <div>
-            
+        <div className='practice-card'>
+            <h3>{title}</h3>
+            <p>{description}</p>
+            <p>Time: {time} minutes</p>
         </div>
     )
 }

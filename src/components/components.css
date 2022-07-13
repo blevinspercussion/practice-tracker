@@ -56,3 +56,25 @@ hr {
     justify-content: space-between;
     width: 35vw;
 }
+
+.home {
+    display: flex;
+    flex-direction: column;
+    max-width: 50vw;
+    align-items: center;
+    justify-content: center;
+    margin-left: 25vw;
+}
+
+.daily-practice {
+    list-style: none;
+    margin-left: 25vw;
+}
+
+.practice-section {
+    
+}
+
+.practice-card {
+
+}
