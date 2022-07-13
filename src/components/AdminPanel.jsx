@@ -141,8 +141,33 @@ function AdminPanel ({ headings, dailyPractice, goals, addGoal, addHeading, addP
                     <br />
                     <input type="submit" onClick={handleGoalSubmit} />
                 </form>
-                <br />
-                <br />
+                <h1>Goals</h1>
+                <ul>
+                    <li>
+                        <h3>Short Term</h3>
+                        <ul>
+                        {goals.map((goal, index) => {
+                            if (goal.type === 'short') {
+                                return (
+                                    <li key={index}>{goal.title}</li>
+                                )
+                            }
+                        })}
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Long Term</h3>
+                        <ul>
+                        {goals.map((goal, index) => {
+                            if (goal.type === 'long') {
+                                return (
+                                    <li key={index}>{goal.title}</li>
+                                )
+                            }
+                        })}
+                        </ul>
+                    </li>
+                </ul>
             </div>            
         </div>
     )
