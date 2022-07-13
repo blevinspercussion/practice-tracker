@@ -6,18 +6,24 @@ function DailyPractice ({ headings, dailyPractice }) {
         <div className="daily-practice">
             {headings.map((heading, index) => {
                 return (
-                    <div className='practice-section' key={index}>
+                    <div key={index}>
                         <li><h1>{heading}</h1></li>
+                        <hr className='heading-divider' />
                         <ul>
                             {dailyPractice.map((practice, index) => {
                                 if (practice.heading === heading) {
                                     return (
+                                        <div className='practice-section'>
+                                        <li>
                                         <PracticeCard 
+                                            index={index}
                                             heading={practice.heading}
                                             title={practice.title}
                                             description={practice.description}
                                             time={practice.time}
                                             />
+                                        </li>
+                                        </div>
                                     )
                                 }
                             })}

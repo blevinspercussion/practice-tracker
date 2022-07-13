@@ -71,10 +71,23 @@ hr {
     margin-left: 25vw;
 }
 
+.heading-divider {
+    margin: -10px;
+    width: 50vw;
+}
+
 .practice-section {
-    
+    display: flex;
+    list-style: none;
 }
 
 .practice-card {
-
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    padding: 15px;
+    margin: 15px;
+    border: 2px solid var(--hilight-color);
+    border-radius: 10px;
+    background-color: #222222;
 }
