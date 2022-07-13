@@ -48,7 +48,7 @@ function AdminPanel ({ headings, dailyPractice, goals, addGoal, addHeading, addP
 
     return (
         <div className='admin-panel'>
-            <div className='admin-sub'>
+            <div className='admin-sub practice-sub'>
                 <h1>Practice</h1>
                 <h3>Add New Heading</h3>
                 <form id="heading-form">

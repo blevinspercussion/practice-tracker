@@ -112,3 +112,9 @@ hr {
     border-radius: 10px;
     background-color: #222222;
 }
+
+.practice-sub {
+    border-right: 4px solid #c3073f;
+    margin-right: 50px;
+    margin-left: 50px;
+}
