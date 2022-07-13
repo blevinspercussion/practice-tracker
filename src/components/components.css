@@ -6,6 +6,21 @@
     --button-color: #4e4e50;
 }
 
+input {
+    border-radius: 5px;
+    font-size: large;
+}
+
+select {
+    border-radius: 5px;
+    font-size: large;
+}
+
+textarea {
+    border-radius: 5px;
+    font-size: large;
+}
+
 a {
     color: var(--main-text-color);
     text-decoration: none;
@@ -66,7 +81,7 @@ hr {
     margin-left: 25vw;
 }
 
-.daily-practice {
+.page-layout {
     list-style: none;
     margin-left: 25vw;
 }
@@ -81,7 +96,13 @@ hr {
     list-style: none;
 }
 
-.practice-card {
+.card-list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.card {
     display: flex;
     flex-direction: column;
     max-width: 300px;

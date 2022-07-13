@@ -3,17 +3,17 @@ import PracticeCard from './PracticeCard';
 
 function DailyPractice ({ headings, dailyPractice }) {
     return (
-        <div className="daily-practice">
+        <div className="page-layout">
             {headings.map((heading, index) => {
                 return (
                     <div key={index}>
                         <li><h1>{heading}</h1></li>
                         <hr className='heading-divider' />
-                        <ul>
+                        <div className='practice-section'>
+                        <ul className='card-list'>
                             {dailyPractice.map((practice, index) => {
                                 if (practice.heading === heading) {
                                     return (
-                                        <div className='practice-section'>
                                         <li>
                                         <PracticeCard 
                                             index={index}
@@ -23,11 +23,11 @@ function DailyPractice ({ headings, dailyPractice }) {
                                             time={practice.time}
                                             />
                                         </li>
-                                        </div>
                                     )
                                 }
                             })}
                         </ul>
+                        </div>
                     </div>
                 )
             })}

@@ -54,7 +54,7 @@ function App() {
                                                     headings={headings}
                                                     dailyPractice={dailyPractice}
                                                     /> } />
-          <Route path="/goals" element={ <Goals /> } />
+          <Route path="/goals" element={ <Goals goals={goals} /> } />
           <Route path="/adminpanel" element={ <AdminPanel 
                                                     headings={headings}
                                                     dailyPractice={dailyPractice}
