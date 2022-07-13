@@ -111,6 +111,19 @@ hr {
     border: 2px solid var(--hilight-color);
     border-radius: 10px;
     background-color: #222222;
+    transition: 0.5s;
+}
+
+.card-complete {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    padding: 15px;
+    margin: 15px;
+    border: 2px solid var(--hilight-color);
+    border-radius: 10px;
+    background-color: #33a45e;
+    transition: 0.5s;
 }
 
 .practice-sub {
