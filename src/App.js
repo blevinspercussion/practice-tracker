@@ -58,7 +58,6 @@ function App() {
   const getHeadingTime = (heading) => {
     let time = 0;
     for (let item in dailyPractice) {
-        console.log(dailyPractice[item].time);
         if (dailyPractice[item].heading === heading) {
             time += dailyPractice[item].time;
         }
