@@ -1,4 +1,5 @@
 import './components.css';
+import trashicon from './svg/trash3.svg'
 
 function AdminPanel ({ headings, dailyPractice, goals, addGoal, addHeading, addPractice }) {
        
@@ -99,13 +100,12 @@ function AdminPanel ({ headings, dailyPractice, goals, addGoal, addHeading, addP
                     {headings.map((heading, index) => {
                         return (
                             <div key={index}>
-                                <li><h3>{heading}</h3></li>
+                                <li><h3>{heading}<img className='icon' src={trashicon} /></h3></li>
                                 <ul>
                                 {dailyPractice.map((practice, index) => {
                                     if (practice.heading === heading) {
-                                        return (
-                                            
-                                            <li key={index}>{practice.title}</li>
+                                        return (                                          
+                                            <li key={index}>{practice.title}<img className='icon' src={trashicon} /></li>
                                         )
                                     }
                                 })}
@@ -149,7 +149,7 @@ function AdminPanel ({ headings, dailyPractice, goals, addGoal, addHeading, addP
                         {goals.map((goal, index) => {
                             if (goal.type === 'short') {
                                 return (
-                                    <li key={index}>{goal.title}</li>
+                                    <li key={index}>{goal.title}<img className='icon' src={trashicon} /></li>
                                 )
                             }
                         })}
@@ -161,7 +161,7 @@ function AdminPanel ({ headings, dailyPractice, goals, addGoal, addHeading, addP
                         {goals.map((goal, index) => {
                             if (goal.type === 'long') {
                                 return (
-                                    <li key={index}>{goal.title}</li>
+                                    <li key={index}>{goal.title}<img className='icon' src={trashicon} /></li>
                                 )
                             }
                         })}

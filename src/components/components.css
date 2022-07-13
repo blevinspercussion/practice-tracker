@@ -118,3 +118,8 @@ hr {
     margin-right: 50px;
     margin-left: 50px;
 }
+
+.icon {
+    filter: invert(100);
+    margin-left: 10px;
+}
