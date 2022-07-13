@@ -104,7 +104,7 @@ function AdminPanel ({ headings, dailyPractice, goals, addGoal, addHeading, addP
                     {headings.map((heading, index) => {
                         return (
                             <div key={index}>
-                                <li><h3>{heading}<img className='icon' src={trashicon} /></h3></li>
+                                <li><h3>{heading}<img className='icon' src={trashicon} onClick={() => deleteHeading(heading)} /></h3></li>
                                 <ul>
                                 {dailyPractice.map((practice, index) => {
                                     if (practice.heading === heading) {

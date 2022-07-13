@@ -46,8 +46,12 @@ function App() {
     setDailyPractice(dailyPractice.filter((practice) => practice.title !== title))
   }
 
-  const deleteHeading = () => {
-
+  const deleteHeading = (heading) => {
+    console.log(headings);
+    console.log(heading);
+    setDailyPractice(dailyPractice.filter((practice) => practice.heading !== heading));
+    setHeadings(headings.filter((text) => heading !== text));
+    console.log(headings);
   }
 
   const deleteGoal = () => {
