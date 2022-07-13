@@ -153,7 +153,7 @@ function AdminPanel ({ headings, dailyPractice, goals, addGoal, addHeading, addP
                         {goals.map((goal, index) => {
                             if (goal.type === 'short') {
                                 return (
-                                    <li key={index}>{goal.title}<img className='icon' src={trashicon} /></li>
+                                    <li key={index}>{goal.title}<img className='icon' src={trashicon} onClick={() => deleteGoal(goal.title)} /></li>
                                 )
                             }
                         })}
@@ -165,7 +165,7 @@ function AdminPanel ({ headings, dailyPractice, goals, addGoal, addHeading, addP
                         {goals.map((goal, index) => {
                             if (goal.type === 'long') {
                                 return (
-                                    <li key={index}>{goal.title}<img className='icon' src={trashicon} /></li>
+                                    <li key={index}>{goal.title}<img className='icon' src={trashicon} onClick={() => deleteGoal(goal.title)} /></li>
                                 )
                             }
                         })}

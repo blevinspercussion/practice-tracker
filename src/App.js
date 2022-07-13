@@ -43,19 +43,16 @@ function App() {
   }
 
   const deletePractice = (title) => {
-    setDailyPractice(dailyPractice.filter((practice) => practice.title !== title))
+    setDailyPractice(dailyPractice.filter((practice) => practice.title !== title));
   }
 
   const deleteHeading = (heading) => {
-    console.log(headings);
-    console.log(heading);
     setDailyPractice(dailyPractice.filter((practice) => practice.heading !== heading));
     setHeadings(headings.filter((text) => heading !== text));
-    console.log(headings);
   }
 
-  const deleteGoal = () => {
-
+  const deleteGoal = (title) => {
+    setGoals(goals.filter((goal) => goal.title !== title));
   }
 
 
