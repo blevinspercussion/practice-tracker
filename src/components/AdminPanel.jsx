@@ -1,6 +1,6 @@
 import './components.css';
 
-function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals, addHeading, addPractice }) {
+function AdminPanel ({ headings, dailyPractice, goals, addGoal, addHeading, addPractice }) {
        
     
     // Functions
@@ -31,6 +31,19 @@ function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals, a
 
         practiceForm.reset();
         
+    }
+
+    const handleGoalSubmit = e => {
+        e.preventDefault();
+
+        const goalsForm = document.getElementById('goals-form');
+        const goalSelect = document.getElementById('goal-select');
+        const goalTitleField = document.getElementById('goal-title-field');
+        const goalDescriptionField = document.getElementById('goal-description-field');
+
+        addGoal(goalSelect.value, goalTitleField.value, goalDescriptionField.value);
+
+        goalsForm.reset();
     }
 
     return (
@@ -110,23 +123,23 @@ function AdminPanel ({ headings, dailyPractice, shortTermGoals, longTermGoals, a
                 <form id="goals-form">
                     <label>Goal Type</label>
                     <br />
-                    <select>
-                        <option value="short-term">Short Term</option>
-                        <option value="long-term">Long Term</option>
+                    <select id="goal-select">
+                        <option value="short">Short Term</option>
+                        <option value="long">Long Term</option>
                     </select>
                     <br />
                     <br />
                     <label>Title</label>
                     <br />
-                    <input type="text" />
+                    <input type="text" id="goal-title-field" />
                     <br />
                     <br />
                     <label>Description/Notes</label>
                     <br />
-                    <textarea cols={50} rows={10} />
+                    <textarea cols={50} rows={10} id="goal-description-field" />
                     <br />
                     <br />
-                    <input type="submit" />
+                    <input type="submit" onClick={handleGoalSubmit} />
                 </form>
                 <br />
                 <br />

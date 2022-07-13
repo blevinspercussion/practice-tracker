@@ -13,15 +13,14 @@ function App() {
   // Initialize state
   const [headings, setHeadings] = useState([]);
   const [dailyPractice, setDailyPractice] = useState([]);
-  const [shortTermGoals, setShortTermGoals] = useState([]);
-  const [longTermGoals, setLongTermGoals] = useState([]);
+  const [goals, setGoals] = useState([]);
 
   // Functions 
   const addHeading = (heading) => {
     setHeadings(headings.concat(heading));
   }
 
-  const addPractice= (heading, title, description, time) => {
+  const addPractice = (heading, title, description, time) => {
     setDailyPractice(dailyPractice.concat(
       {
         heading: heading,
@@ -30,6 +29,18 @@ function App() {
         time: time,
       }
     ))
+  }
+
+  const addGoal = (type, title, description) => {
+    setGoals(goals.concat(
+      {
+        type: type,
+        title: title,
+        description: description,
+      }
+    ))
+    console.log(goals);
+
   }
 
 
@@ -44,8 +55,8 @@ function App() {
           <Route path="/adminpanel" element={ <AdminPanel 
                                                     headings={headings}
                                                     dailyPractice={dailyPractice}
-                                                    shortTermGoals={shortTermGoals}
-                                                    longTermGoals={longTermGoals}
+                                                    goals={goals}
+                                                    addGoal={addGoal}
                                                     addHeading={addHeading}
                                                     addPractice={addPractice}
                                                     /> } />
