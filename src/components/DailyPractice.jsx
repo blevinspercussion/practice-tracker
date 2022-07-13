@@ -1,7 +1,7 @@
 import './components.css';
 import PracticeCard from './PracticeCard';
 
-function DailyPractice ({ headings, dailyPractice }) {
+function DailyPractice ({ headings, dailyPractice, getHeadingTime }) {
 
     if (dailyPractice.length === 0 || headings.length === 0) {
         return (
@@ -16,7 +16,9 @@ function DailyPractice ({ headings, dailyPractice }) {
                 {headings.map((heading, index) => {
                     return (
                         <div key={index}>
-                            <li><h1>{heading}</h1></li>
+                            <li><h1>{heading}</h1>
+                            {getHeadingTime(heading)} minutes
+                            </li>
                             <hr className='heading-divider' />
                             <div className='practice-section'>
                             <ul className='card-list'>

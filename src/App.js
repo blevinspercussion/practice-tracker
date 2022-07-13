@@ -26,7 +26,7 @@ function App() {
         heading: heading,
         title: title,
         description: description,
-        time: time,
+        time: parseInt(time),
       }
     ))
   }
@@ -55,6 +55,17 @@ function App() {
     setGoals(goals.filter((goal) => goal.title !== title));
   }
 
+  const getHeadingTime = (heading) => {
+    let time = 0;
+    for (let item in dailyPractice) {
+        console.log(dailyPractice[item].time);
+        if (dailyPractice[item].heading === heading) {
+            time += dailyPractice[item].time;
+        }
+    }
+    return time;
+}
+
 
   return (
     <div className="App">
@@ -65,6 +76,7 @@ function App() {
           <Route path="/dailypractice" element={ <DailyPractice 
                                                     headings={headings}
                                                     dailyPractice={dailyPractice}
+                                                    getHeadingTime={getHeadingTime}
                                                     /> } />
           <Route path="/goals" element={ <Goals goals={goals} /> } />
           <Route path="/adminpanel" element={ <AdminPanel 
@@ -77,6 +89,7 @@ function App() {
                                                     deleteHeading={deleteHeading}
                                                     deletePractice={deletePractice}
                                                     deleteGoal={deleteGoal}
+                                                    getHeadingTime={getHeadingTime}
                                                     /> } />
         </Routes>
       </Router>
