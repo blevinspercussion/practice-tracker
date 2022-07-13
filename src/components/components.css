@@ -123,3 +123,7 @@ hr {
     filter: invert(100);
     margin-left: 10px;
 }
+
+.icon :hover {
+    cursor: pointer;
+}

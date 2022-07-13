@@ -40,6 +40,17 @@ function App() {
       }
     ))
     console.log(goals);
+  }
+
+  const deletePractice = (title) => {
+    setDailyPractice(dailyPractice.filter((practice) => practice.title !== title))
+  }
+
+  const deleteHeading = () => {
+
+  }
+
+  const deleteGoal = () => {
 
   }
 
@@ -62,6 +73,9 @@ function App() {
                                                     addGoal={addGoal}
                                                     addHeading={addHeading}
                                                     addPractice={addPractice}
+                                                    deleteHeading={deleteHeading}
+                                                    deletePractice={deletePractice}
+                                                    deleteGoal={deleteGoal}
                                                     /> } />
         </Routes>
       </Router>
