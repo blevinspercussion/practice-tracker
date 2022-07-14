@@ -1,7 +1,21 @@
 import './components.css';
+import Login from './Login';
 import { Link } from 'react-router-dom';
 
 function NavBar () {
+
+    const register = async () => {
+
+    };
+
+    const login = async () => {
+
+    };
+
+    const logout = async () => {
+
+    };
+
     return (
         <div className='nav-bar'>
             <ul className='nav-list'>
@@ -15,6 +29,7 @@ function NavBar () {
                     <li>Admin Panel</li>
                 </Link>
             </ul>
+            <Login />
             <hr />
         </div>
     )
