@@ -38,6 +38,7 @@ function App() {
         type: type,
         title: title,
         description: description,
+        complete: false,
       }
     ))
     console.log(goals);
