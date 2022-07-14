@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Goals from './components/Goals';
 import DailyPractice from './components/DailyPractice';
+import Login from './components/Login';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -108,6 +109,7 @@ function App() {
       <Footer />
     </div>
   );
+          
 }
 
 export default App;

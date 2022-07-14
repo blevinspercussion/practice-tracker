@@ -1,5 +1,4 @@
 import './components.css';
-import Login from './Login';
 import { Link } from 'react-router-dom';
 
 function NavBar () {
@@ -19,7 +18,6 @@ function NavBar () {
                     <li>Admin Panel</li>
                 </Link>
             </ul>
-            <Login />
             <hr />
         </div>
     )

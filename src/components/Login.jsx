@@ -49,8 +49,19 @@ function Login () {
         await signOut(auth);
     };
 
+    if (user) {
+        return (
+            <div>
+                <p>Welcome, {user.email}!</p>
+                <button onClick={logout}>Sign Out</button>
+
+            </div>
+        )
+    } else {
+
     return (
         <div className='login-div'>
+            {console.log(user)}
             <div className='register-user'>
                 <h3>Register</h3>
                 <input placeholder='Email' onChange={(e) => {setRegisterEmail(e.target.value)}} />
@@ -62,11 +73,12 @@ function Login () {
                 <input placeholder='Email' onChange={(e) => {setLoginEmail(e.target.value)}} />
                 <input type='password' placeholder='Password' onChange={(e) => {setLoginPassword(e.target.value)}} />
                 <button onClick={login}>Login</button>
-                <p>Welcome, {user?.email}</p>
+                {/* <p>Welcome, {user?.email}</p> */}
                 <button onClick={logout}>Sign Out</button>
             </div>
         </div>
     )
+    }
 }
 
 
