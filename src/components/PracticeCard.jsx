@@ -7,6 +7,7 @@ function PracticeCard ({ title, description, time, practice }) {
     const cardCompleteHandler = () => {
         const card = document.getElementById(title);
         console.log(practice);
+        practice.complete = !practice.complete;
         card.classList.toggle('card-complete');
     }
 
