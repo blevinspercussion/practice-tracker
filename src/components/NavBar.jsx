@@ -4,17 +4,7 @@ import { Link } from 'react-router-dom';
 
 function NavBar () {
 
-    const register = async () => {
 
-    };
-
-    const login = async () => {
-
-    };
-
-    const logout = async () => {
-
-    };
 
     return (
         <div className='nav-bar'>
