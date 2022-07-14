@@ -1,9 +1,13 @@
 import './components.css';
 import PracticeCard from './PracticeCard';
 
-function DailyPractice ({ headings, dailyPractice, getHeadingTime }) {
+function DailyPractice ({ headings, dailyPractice, getHeadingTime, savePractice }) {
 
     const currentDate = new Date().toLocaleDateString({weekday: 'long', year: 'numeric', month: 'long'});
+
+    const handleSavePractice = () => {
+        savePractice(dailyPractice);
+    }
 
     if (dailyPractice.length === 0 || headings.length === 0) {
         return (
@@ -45,6 +49,7 @@ function DailyPractice ({ headings, dailyPractice, getHeadingTime }) {
                         </div>
                     )
                 })}
+                <button onClick={handleSavePractice}>Save Practice</button>
             </div>
     )
             }

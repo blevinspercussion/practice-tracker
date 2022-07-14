@@ -14,6 +14,7 @@ function App() {
   const [headings, setHeadings] = useState([]);
   const [dailyPractice, setDailyPractice] = useState([]);
   const [goals, setGoals] = useState([]);
+  const [pastPractice, setPastPractice] = useState([]);
 
   // Functions 
   const addHeading = (heading) => {
@@ -65,6 +66,16 @@ function App() {
     return time;
 }
 
+  const savePractice = (practice) => {
+    setPastPractice(pastPractice.concat(
+      {
+        date: Date(),
+        practice: practice,
+      }
+    ))
+    console.log(pastPractice);
+  }
+
 
   return (
     <div className="App">
@@ -76,6 +87,7 @@ function App() {
                                                     headings={headings}
                                                     dailyPractice={dailyPractice}
                                                     getHeadingTime={getHeadingTime}
+                                                    savePractice={savePractice}
                                                     /> } />
           <Route path="/goals" element={ <Goals goals={goals} /> } />
           <Route path="/adminpanel" element={ <AdminPanel 
