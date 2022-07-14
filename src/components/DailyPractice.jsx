@@ -3,6 +3,8 @@ import PracticeCard from './PracticeCard';
 
 function DailyPractice ({ headings, dailyPractice, getHeadingTime }) {
 
+    const currentDate = new Date().toLocaleDateString({weekday: 'long', year: 'numeric', month: 'long'});
+
     if (dailyPractice.length === 0 || headings.length === 0) {
         return (
             <div className='page-layout'>
@@ -13,10 +15,11 @@ function DailyPractice ({ headings, dailyPractice, getHeadingTime }) {
 
         return (
             <div className="page-layout">
+                <h1>Practice session for {currentDate}</h1>
                 {headings.map((heading, index) => {
                     return (
                         <div key={index}>
-                            <li><h1>{heading}</h1>
+                            <li><h2>{heading}</h2>
                             {getHeadingTime(heading)} minutes
                             </li>
                             <hr className='heading-divider' />
