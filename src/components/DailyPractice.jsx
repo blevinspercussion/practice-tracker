@@ -5,8 +5,9 @@ function DailyPractice ({ headings, dailyPractice, getHeadingTime, savePractice 
 
     const currentDate = new Date().toLocaleDateString({weekday: 'long', year: 'numeric', month: 'long'});
 
-    const handleSavePractice = () => {
+    const handleSavePractice = (e) => {
         savePractice(dailyPractice);
+        e.target.disabled = true;
     }
 
     if (dailyPractice.length === 0 || headings.length === 0) {
@@ -49,7 +50,7 @@ function DailyPractice ({ headings, dailyPractice, getHeadingTime, savePractice 
                         </div>
                     )
                 })}
-                <button onClick={handleSavePractice}>Save Practice</button>
+                <button id="save-practice-button" disabled={true} onClick={handleSavePractice}>Save Practice</button>
             </div>
     )
             }

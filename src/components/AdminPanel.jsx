@@ -56,7 +56,7 @@ function AdminPanel ({ headings, dailyPractice, goals, addGoal, addHeading, addP
                 <form id="heading-form">
                     <label>Name of Heading</label>
                     <br />
-                    <input type="text" id="headingField" />
+                    <input type="text" id="headingField" required={true} />
                     <br />
                     <br />
                     <input type="submit" onClick={handleHeadingSubmit} />
@@ -68,7 +68,7 @@ function AdminPanel ({ headings, dailyPractice, goals, addGoal, addHeading, addP
                 <form id="practice-form">
                     <label>Heading</label>
                     <br />
-                    <select name='headingsArray' id='headings-select'>
+                    <select name='headingsArray' id='headings-select' required={true}>
                         {headings.map((option, index) => (
                             <option key={index} value={option.value}>
                                 {option}
@@ -79,17 +79,17 @@ function AdminPanel ({ headings, dailyPractice, goals, addGoal, addHeading, addP
                     <br />
                     <label>Title</label>
                     <br />
-                    <input type='text' id="practice-title-field"/>
+                    <input type='text' id="practice-title-field" required={true} />
                     <br />
                     <br />
                     <label>Description/Notes</label>
                     <br />
-                    <textarea cols={50} rows={10} id="practice-description-field"/>
+                    <textarea cols={50} rows={10} id="practice-description-field" required={true} />
                     <br />
                     <br />
                     <label>Time (minutes)</label>
                     <br />
-                    <input type='number' id="practice-time-field" />
+                    <input type='number' id="practice-time-field" required={true} />
                     <br />
                     <br />
                     <input type="submit" onClick={handlePracticeSubmit} />
@@ -124,7 +124,7 @@ function AdminPanel ({ headings, dailyPractice, goals, addGoal, addHeading, addP
                 <form id="goals-form">
                     <label>Goal Type</label>
                     <br />
-                    <select id="goal-select">
+                    <select id="goal-select" required={true}>
                         <option value="short">Short Term</option>
                         <option value="long">Long Term</option>
                     </select>
@@ -132,12 +132,12 @@ function AdminPanel ({ headings, dailyPractice, goals, addGoal, addHeading, addP
                     <br />
                     <label>Title</label>
                     <br />
-                    <input type="text" id="goal-title-field" />
+                    <input type="text" id="goal-title-field" required={true} />
                     <br />
                     <br />
                     <label>Description/Notes</label>
                     <br />
-                    <textarea cols={50} rows={10} id="goal-description-field" />
+                    <textarea cols={50} rows={10} id="goal-description-field" required={true} />
                     <br />
                     <br />
                     <input type="submit" onClick={handleGoalSubmit} />
