@@ -2,10 +2,11 @@ import './components.css';
 
 
 
-function PracticeCard ({ title, description, time }) {
+function PracticeCard ({ title, description, time, practice }) {
 
     const cardCompleteHandler = () => {
         const card = document.getElementById(title);
+        console.log(practice);
         card.classList.toggle('card-complete');
     }
 

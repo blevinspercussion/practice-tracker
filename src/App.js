@@ -28,6 +28,7 @@ function App() {
         title: title,
         description: description,
         time: parseInt(time),
+        complete: false,
       }
     ))
   }
@@ -38,7 +39,6 @@ function App() {
         type: type,
         title: title,
         description: description,
-        complete: false,
       }
     ))
     console.log(goals);

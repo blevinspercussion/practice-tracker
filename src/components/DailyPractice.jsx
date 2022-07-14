@@ -40,6 +40,7 @@ function DailyPractice ({ headings, dailyPractice, getHeadingTime, savePractice 
                                                 title={practice.title}
                                                 description={practice.description}
                                                 time={practice.time}
+                                                practice={practice}
                                                 />
                                             </li>
                                         )
